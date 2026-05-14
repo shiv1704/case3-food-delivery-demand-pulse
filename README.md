@@ -80,3 +80,16 @@ app/
 README.md
 DECISIONS.md
 ```
+
+---
+
+## Dashboard Preview
+
+### Main KPI
+![dashboard](assets/screenshots/kpis.png)
+
+### Demand Heatmap
+![heatmap](assets/screenshots/heatmap.png)
+
+### Forecast Section
+![forecast](assets/screenshots/forecast.png)
