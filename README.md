@@ -1,85 +1,52 @@
-# Food Delivery Demand Pulse
+# Case 3: Food Delivery Demand Pulse
 
-## Problem Statement
-A food delivery platform wants to understand demand spikes, surge inefficiencies, and operational bottlenecks across cities.
-
----
-
-## Dataset
-- ~50,000 synthetic food delivery orders
-- 7 cities
-- 9 cuisines
-- 90-day period
+**Live demo:** https://case3-food-delivery-demand-pulse-9fpkaptmq5vyvjecwa963k.streamlit.app/
+**Repo:** https://github.com/shiv1704/case3-food-delivery-demand-pulse.git
+**Demo video:** will share
 
 ---
 
-## Tech Stack
-- Python
-- Pandas
-- Plotly
-- Streamlit
-- Prophet
+## What this is
+
+A demand analytics and forecasting dashboard for a food delivery platform, built to surface demand spikes, surge inefficiencies, and operational bottlenecks across cities. Designed for operations and strategy teams who need to make rider allocation and pricing decisions backed by data.
 
 ---
 
-## Key Insights
-- Evening demand significantly exceeds lunch demand.
-- Bangalore and Mumbai show highest operational load.
-- Surge pricing alone does not fully reduce delivery delays.
+## How to run locally
+
+1. `git clone https://github.com/shiv1704/case3-food-delivery-demand-pulse.git`
+2. `pip install -r requirements.txt`
+3. `streamlit run app/streamlit_app.py`
+4. Open http://localhost:8501
 
 ---
 
-## Forecasting
-Implemented a 7-day short-horizon demand forecast using Prophet.
+## Stack
+
+- **Python** — primary language; well-suited for data pipelines and ML
+- **Pandas** — data wrangling and aggregation across 50k orders
+- **Plotly** — interactive charts without needing a separate frontend
+- **Streamlit** — fastest path from notebook to shareable dashboard
+- **Prophet** — out-of-the-box time-series forecasting with minimal tuning
 
 ---
 
-## Executive Recommendations
+## What's NOT done
 
-### 1. City-Specific Rider Allocation
-Optimize rider staffing based on city-level demand patterns.
-
-### 2. Dynamic Surge Optimization
-Combine surge pricing with proactive rider balancing.
-
-### 3. Forecast-Driven Operations
-Use demand forecasts to improve peak-hour rider positioning.
+- Real-time streaming ingestion — would require Kafka/Flink; out of scope for a static dataset
+- Weather and traffic integration — no public API key available during build
+- Cuisine-level forecasting — data too sparse at that granularity for reliable Prophet fits
+- Rider-route optimization — needs geospatial data not present in the dataset
 
 ---
 
-## Dashboard Features
-- KPI tracking
-- Demand heatmaps
-- Delivery time analysis
-- Forecast table
-- City and cuisine filters
+## In production, I would also add
 
----
-
-## How to Run
-
-```bash
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
-```
-
----
-
-## Live Demo
-https://case3-food-delivery-demand-pulse-9fpkaptmq5vyvjecwa963k.streamlit.app/
-
----
-
-## Repository Structure
-
-```text
-data/
-notebooks/
-outputs/
-app/
-README.md
-DECISIONS.md
-```
+- Live order ingestion via Kafka with a streaming aggregation layer
+- Automated daily model retraining with drift detection
+- SLA breach alerting tied to forecast confidence intervals
+- Per-city model versioning and A/B evaluation pipeline
+- Role-based access control for ops vs. executive views
 
 ---
 
