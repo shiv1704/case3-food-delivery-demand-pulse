@@ -2,7 +2,7 @@
 
 **Live demo:** https://case3-food-delivery-demand-pulse-9fpkaptmq5vyvjecwa963k.streamlit.app/
 **Repo:** https://github.com/shiv1704/case3-food-delivery-demand-pulse.git
-**Demo video:** will share
+**Demo video:** https://www.loom.com/share/4ed78202aded49f6a53e15de94f968ed
 
 ---
 
