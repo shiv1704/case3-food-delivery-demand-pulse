@@ -50,6 +50,33 @@ A demand analytics and forecasting dashboard for a food delivery platform, built
 
 ---
 
+## Forecast Output & Production Evaluation
+
+The project generates a 7-day short-horizon demand forecast using Prophet.
+
+Forecast outputs are stored at:
+
+```text
+outputs/forecast/7_day_forecast.csv
+```
+
+### Production Evaluation Approach
+
+In a production environment, forecast quality would be monitored using:
+
+- Mean Absolute Error (MAE)
+- Mean Absolute Percentage Error (MAPE)
+- Daily forecast vs actual demand variance
+- SLA breach correlation during peak-demand windows
+
+### Operational Monitoring
+
+The forecasting pipeline would ideally run daily with automated retraining, rolling forecast validation, and operational alerting for abnormal demand spikes.
+
+Future iterations could integrate weather signals, traffic conditions, and live rider availability data.
+
+---
+
 ## Dashboard Preview
 
 ### Main KPI
